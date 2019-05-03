@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileBanana"
+             xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android"
+             x:Class="MobileBanana.MainPage">
+    <Grid x:Name="gridLayout"
+        BackgroundColor="CadetBlue">
+        <Grid.BindingContext>
+            <local:VoiceMeeterViewModel />
+        </Grid.BindingContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="{Binding VoiceMeeter.Strips[0].Gain, StringFormat='{0}'}"
+               x:Name="textLabel"
+               Grid.Row="0"  
+               Grid.Column="1"
+               >
+        </Label>
+
+        <Slider x:Name="Slider0"
+            Minimum="-60"
+                Maximum="12"
+                Rotation="-90"
+                Scale="2"
+                Value="{Binding VoiceMeeter.Strips[0].Gain, Mode=TwoWay}"
+                Grid.Row="2"
+                Grid.Column="0" />
+        <Button Text="{Binding VoiceMeeter.Strips[0].Mute, StringFormat='{0}', Mode=OneWay}" 
+                Grid.Row="2" 
+                Grid.Column="0" 
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+        <Slider x:Name="Slider1"
+            Minimum="-60"
+                Maximum="12"
+                Value="{Binding VoiceMeeter.Strips[1].Gain, Mode=OneWay}"
+                Rotation="-90"
+                Scale="2"
+                Grid.Row="2"
+                Grid.Column="1"
+                />
+        <Slider x:Name="Slider2"
+            Minimum="-60"
+                Maximum="12"
+                Value="{Binding VoiceMeeter.Strips[2].Gain, Mode=OneWay}"
+                Rotation="-90"
+                Scale="2"
+                Grid.Row="2"
+                Grid.Column="2"/>
+
+        <Label Text="Bottom Right" 
+               Grid.Row="1" 
+               Grid.Column="1" />
+        <Button Text="{Binding SendVoiceMeeterSettingsToServer, StringFormat='sending {0}'}" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="Fill"/>
+    </Grid>
+
+</ContentPage>

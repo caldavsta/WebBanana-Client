@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="4"
+    android:columnCount="10">
+    <ProgressBar
+        android:layout_column="0"
+        android:layout_row="0"
+        android:layout_width="wrap_content"
+        android:min="0"
+        android:max="1000"
+        android:id="@+id/levels_0"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_marginTop="12.0dp"
+        android:layout_marginBottom="12.0dp" />
+    <MobileBanana.Droid.VerticalSeekBar
+        android:layout_column="0"
+        android:layout_row="3"
+        android:layout_columnSpan="8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="72"
+        android:min="0"
+        android:id="@+id/gain0"
+        android:layout_marginRight="48.0dp"
+        android:layout_marginTop="12.0dp"
+        android:layout_marginBottom="8.0dp" />
+    <ToggleButton
+        android:layout_column="1"
+        android:layout_row="1"
+        android:textOn="Mute"
+        android:textOff="Mute"
+        android:onClick="OnClick"
+        android:id="@+id/Mute_0" />
+    <ToggleButton
+        android:layout_column="2"
+        android:layout_row="1"
+        android:textOn="Mono"
+        android:textOff="Mono"
+        android:onClick="OnClick"
+        android:id="@+id/Mono_0" />
+    <ToggleButton
+        android:layout_column="3"
+        android:layout_row="1"
+        android:textOn="Solo"
+        android:textOff="Solo"
+        android:onClick="OnClick"
+        android:id="@+id/Solo_0" />
+    <ToggleButton
+        android:layout_column="4"
+        android:layout_row="1"
+        android:textOn="A1"
+        android:textOff="A1"
+        android:onClick="OnClick"
+        android:id="@+id/A1_0" />
+    <ToggleButton
+        android:layout_column="5"
+        android:layout_row="1"
+        android:textOn="A2"
+        android:textOff="A2"
+        android:onClick="OnClick"
+        android:id="@+id/A2_0" />
+    <ToggleButton
+        android:layout_column="6"
+        android:layout_row="1"
+        android:text="A3"
+        android:textOn="A3"
+        android:textOff="A3"
+        android:onClick="OnClick"
+        android:id="@+id/A3_0" />
+    <ToggleButton
+        android:layout_column="7"
+        android:layout_row="1"
+        android:textOn="B1"
+        android:textOff="B1"
+        android:onClick="OnClick"
+        android:id="@+id/B1_0" />
+    <ToggleButton
+        android:layout_column="8"
+        android:layout_row="1"
+        android:textOn="B2"
+        android:textOff="B2"
+        android:onClick="OnClick"
+        android:id="@+id/B2_0" />
+</GridLayout>
